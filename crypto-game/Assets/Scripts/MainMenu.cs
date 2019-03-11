@@ -10,15 +10,16 @@ public class MainMenu : MonoBehaviour {
 	void Start() {
 	
 	}
-	
-	// Update is called once per frame
+
 	void Update() {
 	
 	}
+    //lvl 1 load
 	public void loadLVL()
 	{
 		SceneManager.LoadScene(level, LoadSceneMode.Single);
 	}
+    //app exit
 	public void exitGame()
 	{
 		Application.Quit();
