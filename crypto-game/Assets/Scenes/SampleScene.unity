@@ -423,6 +423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hint: {fileID: 1330586096}
   checkBox: {fileID: 293951709}
+  animation1: {fileID: 1330586100}
+  animation2: {fileID: 1961781452}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -572,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1330586097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -643,7 +645,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 38dfe823da5b36747863f0fccbc5dd2b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1482939752
@@ -818,7 +820,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 38dfe823da5b36747863f0fccbc5dd2b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &2076392802
