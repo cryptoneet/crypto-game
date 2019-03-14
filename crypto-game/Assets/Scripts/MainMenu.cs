@@ -1,27 +1,20 @@
 ﻿using UnityEngine;
-//using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
 	public int level;
 
-	// Use this for initialization
-	void Start() {
+    // Use this for initialization
+    private void Start() {
 	
 	}
 
-	void Update() {
+    private void Update() {
 	
 	}
     //lvl 1 load
-	public void loadLVL()
-	{
-		SceneManager.LoadScene(level, LoadSceneMode.Single);
-	}
+    public void LoadLVL() => SceneManager.LoadScene(level, LoadSceneMode.Single);
     //app exit
-	public void exitGame()
-	{
-		Application.Quit();
-	}
+    public void ExitGame() => Application.Quit();
 }
