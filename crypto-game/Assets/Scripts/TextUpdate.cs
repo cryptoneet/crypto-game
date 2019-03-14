@@ -25,7 +25,7 @@ public class TextUpdate : MonoBehaviour
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789?!@#$&";
             char[] text = { 'C', 'r', 'y', 'p', 't', 'o', 'N', 'E', 'E', 'T', ' ', 'T', 'e', 'a', 'm', '\n', 'P', 'r', 'e', 's', 'e', 'n', 't', 's' };
             timer += Time.deltaTime;
-            if (timer < 2.16f)
+            if (timer < 1.08f)
             {
                 for (int i = 0; i < text.Length; i++)
                 {
@@ -35,7 +35,7 @@ public class TextUpdate : MonoBehaviour
                         text[i] = chars[rnd.Next(chars.Length)];
                 }
             }
-            else if (timer >=2.16f && timer < 2.52f)
+            else if (timer >=1.08f && timer < 1.26f)
             {
                 for (int i = 1; i < text.Length; i++)
                 {
@@ -45,7 +45,7 @@ public class TextUpdate : MonoBehaviour
                      text[i] = chars[rnd.Next(chars.Length)];
                 }
             }
-            else if(timer >= 2.52f && timer < 2.88f)
+            else if(timer >= 1.26f && timer < 1.44f)
             {
                 for (int i = 2; i < text.Length; i++)
                 {
@@ -56,7 +56,7 @@ public class TextUpdate : MonoBehaviour
                 }
                     
             }
-            else if(timer >= 2.88f && timer < 3.24f)
+            else if(timer >= 1.44f && timer < 1.62f)
             {
                 for (int i = 3; i < text.Length; i++)
                 {
@@ -66,7 +66,7 @@ public class TextUpdate : MonoBehaviour
                         text[i] = chars[rnd.Next(chars.Length)];
                 }  
             }
-            else if(timer >= 3.24 && timer < 3.6){
+            else if(timer >= 1.62f && timer < 1.8f){
                 for (int i = 4; i < text.Length; i++)
                 {
                     if (i == 15)
@@ -75,7 +75,7 @@ public class TextUpdate : MonoBehaviour
                         text[i] = chars[rnd.Next(chars.Length)];
                 }
             }
-            else if(timer >= 3.6f && timer < 3.96f)
+            else if(timer >= 1.8f && timer < 1.98f)
             {
                         for (int i = 5; i < text.Length; i++)
                         {
@@ -85,7 +85,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 3.96f && timer < 4.32)
+            else if(timer >= 1.98f && timer < 2.16f)
             {
                         for (int i = 6; i < text.Length; i++)
                         {
@@ -95,7 +95,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 4.32f && timer < 4.68f)
+            else if(timer >= 2.16f && timer < 2.34f)
             {
                         for (int i = 7; i < text.Length; i++)
                         {
@@ -105,7 +105,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 4.68f && timer < 5.04f)
+            else if(timer >= 2.34f && timer < 2.52f)
             {
                         for (int i = 8; i < text.Length; i++)
                         {
@@ -115,7 +115,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 5.04f && timer < 5.4f)
+            else if(timer >= 2.52f && timer < 2.7f)
             {
                         for (int i = 9; i < text.Length; i++)
                         {
@@ -125,7 +125,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 5.4f && timer < 6.12f)
+            else if(timer >= 2.7f && timer < 2.88f)
             {
                         for (int i = 10; i < text.Length; i++)
                         {
@@ -135,7 +135,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 6.12f && timer < 6.48f)
+            else if(timer >= 2.88f && timer < 3.06f)
             {
                         for (int i = 11; i < text.Length; i++)
                         {
@@ -145,7 +145,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >=6.48f && timer < 6.84f)
+            else if(timer >= 3.06f && timer < 3.24f)
             {
                         for (int i = 12; i < text.Length; i++)
                         {
@@ -155,7 +155,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 6.84f && timer < 7.2f)
+            else if(timer >= 3.24f && timer < 3.42f)
             {
                         for (int i = 13; i < text.Length; i++)
                         {
@@ -165,7 +165,7 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 7.2f && timer < 7.56f)
+            else if(timer >= 3.42f && timer < 3.6f)
             {
                         for (int i = 14; i < text.Length; i++)
                         {
@@ -175,42 +175,42 @@ public class TextUpdate : MonoBehaviour
                                 text[i] = chars[rnd.Next(chars.Length)];
                         }
             }
-            else if(timer >= 7.56f && timer < 7.92f)
+            else if(timer >= 3.6f && timer < 3.78f)
             {
                     for (int i = 15; i < text.Length; i++)
                         text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 7.92f && timer < 8.28f)
+            else if(timer >= 3.78f && timer < 3.96f)
             {
                     for (int i = 17; i < text.Length; i++)
                         text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 8.28f && timer < 8.64f)
+            else if(timer >= 3.96f && timer < 4.14f)
             {
                         for (int i = 18; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 8.64f && timer < 9f)
+            else if(timer >= 4.14f && timer < 4.32f)
             {
                         for (int i = 19; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >=9f && timer < 9.36f)
+            else if(timer >= 4.32f && timer < 4.5f)
             {
                         for (int i = 20; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 9.36f && timer < 9.72f)
+            else if(timer >= 4.5f && timer < 4.68f)
             {
                         for (int i = 21; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 9.72f && timer < 10.08f)
+            else if(timer >= 4.68f && timer < 4.86f)
             {
                         for (int i = 22; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
             }
-            else if(timer >= 10.08f && timer < 11.5f)
+            else if(timer >= 4.86f && timer < 5.5f)
             {
                         for (int i = 23; i < text.Length; i++)
                             text[i] = chars[rnd.Next(chars.Length)];
