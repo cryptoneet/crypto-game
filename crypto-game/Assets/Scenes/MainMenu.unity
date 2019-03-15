@@ -2135,8 +2135,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.10423357, y: 0.43686342}
   m_AnchorMax: {x: 0.41076645, y: 0.62213665}
-  m_AnchoredPosition: {x: 0.009216309, y: 0.0000076293945}
-  m_SizeDelta: {x: 0.480011, y: 0}
+  m_AnchoredPosition: {x: 8.400024, y: 0.0000076293945}
+  m_SizeDelta: {x: -16.3, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &1479073279
 Animation:
@@ -3033,6 +3033,28 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: cdb57e4da0138d54882a9a59762f77ac,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1479073277}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 750245276}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
