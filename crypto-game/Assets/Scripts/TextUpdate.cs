@@ -13,7 +13,7 @@ public class TextUpdate : MonoBehaviour
     public float animEnd = 3.24f;
     public float sceneEnd = 4f;
     private System.Random rnd = new System.Random();
-    //public bool Active = false;
+    
     // Start is called before the first frame update
     void Start()
     {
