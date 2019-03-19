@@ -525,7 +525,6 @@ GameObject:
   - component: {fileID: 319331395}
   - component: {fileID: 319331391}
   - component: {fileID: 319331390}
-  - component: {fileID: 319331394}
   m_Layer: 5
   m_Name: magnifier
   m_TagString: Untagged
@@ -657,27 +656,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319331388}
   m_CullTransparentMesh: 0
---- !u!50 &319331394
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319331388}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &319331395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1994,7 +1972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.29375, y: 0.102000006}
   m_AnchorMax: {x: 0.32375002, y: 0.28100002}
-  m_AnchoredPosition: {x: 3.0177917, y: 9.2300415}
+  m_AnchoredPosition: {x: 3.0177612, y: 9.2300415}
   m_SizeDelta: {x: 6.0356, y: 18.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1044496257
@@ -2430,7 +2408,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 279bbee7460e6eb439d3d0f2cfac35ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
