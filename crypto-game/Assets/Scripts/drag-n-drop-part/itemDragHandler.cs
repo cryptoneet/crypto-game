@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class itemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler 
+public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler 
 {
+    public static GameObject itemDragged;
     Vector3 mainPos;
-    bool dragHandleEnd = false;
-
     public float speedBack = 8.0f;
 
     void Start()
     {
         mainPos = transform.position;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        itemDragged = gameObject;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -22,9 +26,7 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        dragHandleEnd = true;
-        // transform.Translate(mainPos - transform.position * Time.deltaTime * speedBack);
-        // transform.position = Vector3.Lerp(transform.position, mainPos, Time.deltaTime * speedBack);
+        itemDragged = null;
     }
 
     //handling the collision
@@ -35,12 +37,9 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IEndDragHandler
 
     void Update()
     {
-        if (dragHandleEnd)
+        if (itemDragged == null)
         {
             transform.position = Vector3.Lerp(transform.position, mainPos, Time.deltaTime * speedBack);
-            if (transform.position == mainPos)
-                dragHandleEnd = false;
         }
-       
     }
 }
