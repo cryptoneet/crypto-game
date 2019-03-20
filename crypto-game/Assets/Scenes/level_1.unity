@@ -528,9 +528,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.69}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208.92932, y: -221.07832}
+  m_AnchoredPosition: {x: 208.92928, y: -224.44153}
   m_SizeDelta: {x: 86.57001, y: 76.194}
-  m_Pivot: {x: 0.13711868, y: 0.15602386}
+  m_Pivot: {x: 0.111789644, y: 0.122554176}
 --- !u!58 &319331390
 CircleCollider2D:
   m_ObjectHideFlags: 0
