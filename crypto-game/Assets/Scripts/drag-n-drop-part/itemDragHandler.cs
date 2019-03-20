@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler 
 {
+
+    //drag part****************************************
     public static GameObject itemDragged;
     Vector3 mainPos;
     public float speedBack = 8.0f;
+
 
     void Start()
     {
@@ -29,12 +33,7 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
         itemDragged = null;
     }
 
-    //handling the collision
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
+    
     void Update()
     {
         if (itemDragged == null)
