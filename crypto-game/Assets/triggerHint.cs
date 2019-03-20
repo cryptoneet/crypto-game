@@ -24,12 +24,8 @@ public class triggerHint : MonoBehaviour
             {
                 blick_aud.Play();
             }
-
-
-
-            targTime = 1.5f;
+            targTime = 2f;
             onTrigTimer = true;
-
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -41,7 +37,6 @@ public class triggerHint : MonoBehaviour
             onTrigTimer = false;
         }
     }
-
     void Update()
     {
         if (onTrigTimer)
@@ -51,6 +46,8 @@ public class triggerHint : MonoBehaviour
             if (targTime <= 0.0f)
             {
                 onTrigTimer = false;
+                blick_vis.Play("blick_hide");
+
             }
         }
     }
