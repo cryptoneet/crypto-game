@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Settings
   - clue_blick
   - magnifier
+  - pencil
+  - tutor_note
   layers:
   - Default
   - TransparentFX
