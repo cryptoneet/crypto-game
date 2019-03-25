@@ -1,34 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class pencilDraw : MonoBehaviour
 {
     public static GameObject parObj, drawPar;
     private int it = 0;
+    private bool act = false;
     Vector3 curPos, lastPos;
 
     public float width, height;
     
+    //Start callded once per run
 
     void Start()
     {
-        parObj = this.transform.parent.gameObject;
+        parObj = transform.parent.gameObject;
         drawPar = GameObject.FindGameObjectWithTag("draw_zone");
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "draw_zone")
+            act = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "draw_zone")
+            act = false;
     }
     
     // Update is called once per frame
     void Update()
     {
-        curPos = transform.position;
-        if (curPos != lastPos)
+        if (act) 
         {
+            curPos = transform.position;
             if (parObj.GetComponent<itemDragHandler>().itemDragged != null)
             {
-                NewObj();
+                if (curPos != lastPos)
+                {
+                    NewObj();
+                    it++;
+                }
             }
-            it++;
             lastPos = curPos;
         }
     }
@@ -37,7 +52,7 @@ public class pencilDraw : MonoBehaviour
     {
         GameObject obj = new GameObject("px" + it);
         obj.transform.SetParent(drawPar.transform);
-        obj.transform.position = this.transform.position;
+        obj.transform.position = transform.position;
         obj.AddComponent<RectTransform>().sizeDelta = new Vector2(width, height);
         obj.AddComponent<Image>().color = new Color32(0, 0, 0, 255);
     }
