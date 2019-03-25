@@ -8,7 +8,9 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
 {
 
     //drag part****************************************
-    public static GameObject itemDragged;
+    public GameObject itemDragged;
+    private GameObject[] allDis;
+    public string tagDis;
     Vector3 mainPos;
     public float speedBack = 8.0f;
 
@@ -16,11 +18,14 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     void Start()
     {
         mainPos = transform.position;
+        allDis = GameObject.FindGameObjectsWithTag(tagDis);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         itemDragged = gameObject;
+        foreach (GameObject g in allDis)
+            g.SetActive(false);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -31,6 +36,8 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     public void OnEndDrag(PointerEventData eventData)
     {
         itemDragged = null;
+        foreach (GameObject g in allDis)
+            g.SetActive(true);
     }
 
     
