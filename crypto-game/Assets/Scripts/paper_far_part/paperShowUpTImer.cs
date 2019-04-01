@@ -7,17 +7,18 @@ using System.Threading;
 
 public class paperShowUpTImer : MonoBehaviour
 {
+    //btns state
     public Button btnState;
     public Button btnHint;
     //animators
     public Animator animatorPaper;
     public Animator hintShowAnimtr;
-
+    //delays
     public float showDelay = 3f;
     float timerHold = 4f;
-
+    //for hint text 
     public Text hintText;
-
+    //boolean statements for 
     bool btnClicked = false;
     bool paperHoldState = false;
 
