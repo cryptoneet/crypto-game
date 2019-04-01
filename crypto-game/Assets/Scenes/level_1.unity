@@ -675,6 +675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targTime: 0
+  txtMngr: {fileID: 1349202079}
 --- !u!1 &357956097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,6 +3161,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: onPaperClickChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1282477507
@@ -3731,6 +3743,7 @@ GameObject:
   - component: {fileID: 1349202076}
   - component: {fileID: 1349202075}
   - component: {fileID: 1349202078}
+  - component: {fileID: 1349202079}
   m_Layer: 5
   m_Name: hintPrefab
   m_TagString: Untagged
@@ -3879,6 +3892,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1349202079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349202073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f555cb98ec213ca4e956317025ae3d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtHint: {fileID: 1089470247}
+  animForHint: {fileID: 1349202075}
 --- !u!1 &1446853084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,7 +4084,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 68b3770f6bad3ba42af6100f05b3ff36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ac4ecb380234c146aedb553391e37ab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -22,11 +22,6 @@ public class paperShowUpTImer : MonoBehaviour
     bool btnClicked = false;
     bool paperHoldState = false;
 
-    private void Start()
-    {
-           
-    }
-
     void Update()
     {
         if (btnClicked)

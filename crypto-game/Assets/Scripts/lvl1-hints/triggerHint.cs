@@ -12,6 +12,8 @@ public class triggerHint : MonoBehaviour
     Animator blick_vis;
     AudioSource blick_aud;
     bool onTrigTimer = false;
+    //for textChangeManager
+    public TextChangeManager txtMngr;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,6 +49,7 @@ public class triggerHint : MonoBehaviour
             {
                 onTrigTimer = false;
                 blick_vis.Play("blick_hide");
+                txtMngr.onClueFoundChange();
 
             }
         }
