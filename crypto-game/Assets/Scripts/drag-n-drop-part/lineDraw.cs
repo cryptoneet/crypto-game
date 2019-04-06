@@ -52,8 +52,8 @@ public class lineDraw : MonoBehaviour
         Vector3 lVec = curPos;
         if(it == 0)
             lVec.z = -1;
-        //lVec.x -= 500;
-        //lVec.y -= 100;
+        lVec.x -= drawPar.transform.position.x;
+        lVec.y -= drawPar.transform.position.y;
         drawPar.GetComponent<LineRenderer>().positionCount = it + 1;
         drawPar.GetComponent<LineRenderer>().SetPosition(it, lVec);
     }
