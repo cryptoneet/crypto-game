@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler 
 {
@@ -25,7 +22,7 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     {
         itemDragged = gameObject;
         foreach (GameObject g in allDis)
-            g.SetActive(false);
+            g.GetComponent<Collider2D>().enabled = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -37,7 +34,7 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     {
         itemDragged = null;
         foreach (GameObject g in allDis)
-            g.SetActive(true);
+            g.GetComponent<Collider2D>().enabled = true;
     }
 
     
