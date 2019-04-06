@@ -1,20 +1,19 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class pencilDraw : MonoBehaviour
+public class lineDraw : MonoBehaviour
 {
     public static GameObject parObj, drawPar;
     private int it = 0;
     private bool act = false;
     Vector3 curPos, lastPos;
 
-    public float width, height;
-    
     //Start callded once per run
 
     void Start()
     {
-        parObj = transform.parent.gameObject;
+        parObj = this.transform.parent.gameObject;
         drawPar = GameObject.FindGameObjectWithTag("draw_zone");
     }
 
@@ -29,18 +28,18 @@ public class pencilDraw : MonoBehaviour
         if (collision.tag == "draw_zone")
             act = false;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        if (act) 
+        if (act)
         {
-            curPos = transform.position;
+            curPos = this.transform.position;
             if (parObj.GetComponent<itemDragHandler>().itemDragged != null)
             {
                 if (curPos != lastPos)
                 {
-                    NewObj();
+                    NewLine();
                     it++;
                 }
             }
@@ -48,12 +47,14 @@ public class pencilDraw : MonoBehaviour
         }
     }
 
-    void NewObj()
+    void NewLine()
     {
-        GameObject obj = new GameObject("px" + it);
-        obj.transform.SetParent(drawPar.transform);
-        obj.transform.position = transform.position;
-        obj.AddComponent<RectTransform>().sizeDelta = new Vector2(width, height);
-        obj.AddComponent<Image>().color = new Color32(0, 0, 0, 255);
+        Vector3 lVec = curPos;
+        if(it == 0)
+            lVec.z = -1;
+        //lVec.x -= 500;
+        //lVec.y -= 100;
+        drawPar.GetComponent<LineRenderer>().positionCount = it + 1;
+        drawPar.GetComponent<LineRenderer>().SetPosition(it, lVec);
     }
 }
