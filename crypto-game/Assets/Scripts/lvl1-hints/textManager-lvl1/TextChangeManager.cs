@@ -23,7 +23,7 @@ public class TextChangeManager : MonoBehaviour
     }
     public void onClueFoundChange()
     {
-            txtHint.text = "***CLUE TEXT***";
+            txtHint.text = "*на бумаге найдены неровности* \nВидимо на бумагу преднамеренно было нанесено какое-то вещество. Нужно придумать, как с ним взаимодействовать.";
             animForHint.Play("showHint");   
     }
 }
