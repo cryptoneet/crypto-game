@@ -5,14 +5,17 @@ using UnityEngine;
 public class SlideTrigger : MonoBehaviour
 {
     public Animator obj;
+    public GameObject arrow;
     public float startTime;
     public float EndTime;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     bool coroutine = false;
     void Start()
     {
         obj = GetComponent<Animator>();
         StartCoroutine(Example());
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,9 +28,10 @@ public class SlideTrigger : MonoBehaviour
             {
                 // obj.Play("Slide1move");
                 obj.GetComponent<Animator>().SetTrigger("Clicked");
-                
+                arrow.SetActive(false);
+                audioSource.Play();
                 StartCoroutine(Example());
-
+                coroutine = false;
             }
         }
     }
@@ -35,6 +39,7 @@ public class SlideTrigger : MonoBehaviour
     {
         coroutine = false;
         yield return new WaitForSeconds(5);
+        arrow.SetActive(true);
         coroutine = true;
     }
 }
