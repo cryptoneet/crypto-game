@@ -8,6 +8,7 @@ TagManager:
   - magnifier
   - pencil
   - draw_zone
+  - Settings
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: drawable
+    uniqueID: 2873803419
+    locked: 0
+  - name: moving
+    uniqueID: 3082936715
     locked: 0
