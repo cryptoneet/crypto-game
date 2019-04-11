@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 83080982}
   - component: {fileID: 83080981}
   m_Layer: 0
-  m_Name: kisspng-green-arrow-clip-art-green-arrow-transparent-png-5a78131990b7c7.6991945215178186495928
+  m_Name: Brown Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: b7d0f64a9b0e2984fa64f01e226084f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 02144ee51608839429291c912665dc43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -264,8 +264,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83080980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 837, y: 101, z: 0}
-  m_LocalScale: {x: 33.97044, y: 33.97044, z: 33.97044}
+  m_LocalPosition: {x: 851.2, y: 80, z: 0}
+  m_LocalScale: {x: 73.25476, y: 107.72758, z: 107.72758}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1541,7 +1541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 944.00006, y: -1087}
+  m_AnchoredPosition: {x: 944.0001, y: -1087}
   m_SizeDelta: {x: 0.000061035156, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119749436
