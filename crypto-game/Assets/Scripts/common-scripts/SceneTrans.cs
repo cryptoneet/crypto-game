@@ -28,4 +28,16 @@ public class SceneTrans : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(sceneName);
     }
+    
+    public void toEnScene()
+    {
+        SceneManager.LoadScene("MainMenu_en");
+    }
+
+    public void toRuScene()
+    {
+        SceneManager.LoadScene("MainMenu_ru");
+    }
+
+
 }
