@@ -9,6 +9,7 @@ TagManager:
   - pencil
   - draw_zone
   - Settings
+  - text
   layers:
   - Default
   - TransparentFX

@@ -50,8 +50,10 @@ public class lineDraw : MonoBehaviour
     void NewLine()
     {
         Vector3 lVec = curPos;
-        if(it == 0)
-            lVec.z = 0;
+        if (it == 0)
+            lVec.z = -50;
+        else
+            lVec.z = -49;
         lVec.x -= drawPar.transform.position.x;
         lVec.y -= drawPar.transform.position.y;
         drawPar.GetComponent<LineRenderer>().positionCount = it + 1;
