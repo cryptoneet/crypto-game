@@ -10,6 +10,8 @@ public class TextChangeManager : MonoBehaviour
     public Animator animForHint;
     //counter for paper far click
     int cHint = 0;
+    //counter for paper cake click
+    int cCake = 0;
 
     public void onPaperClickChange()
     {
@@ -25,5 +27,15 @@ public class TextChangeManager : MonoBehaviour
     {
         txtHint.text = "*на бумаге найдены неровности* \nВидимо на бумагу преднамеренно было нанесено какое-то вещество. Нужно придумать, как с ним взаимодействовать.";
         animForHint.Play("showHint");   
+    }
+    public void onPaperCake()
+    {
+        if(cCake < 1)
+        {
+            txtHint.text = "Некоторые объекты можно рассматривать более детально. \nРазверните листок свайпом чтобы исследовать его детальнее.";
+            animForHint.Play("showHint");
+            cCake++;
+        }
+        
     }
 }
