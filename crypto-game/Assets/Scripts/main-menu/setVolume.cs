@@ -12,5 +12,6 @@ public class setVolume : MonoBehaviour
     void Update()
     {
       source.volume = slider.value;
+      globalVar.volValue = slider.value;
     }
 }

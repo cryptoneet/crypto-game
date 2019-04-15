@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
 
     public void playSound(AudioClip clip)
     {
+        player.volume = globalVar.volValue;
         player.clip = clip;
         player.Play();
     }
