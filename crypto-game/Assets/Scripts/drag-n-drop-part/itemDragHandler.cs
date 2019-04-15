@@ -11,7 +11,6 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
     Vector3 mainPos;
     public float speedBack = 8.0f;
 
-
     void Start()
     {
         mainPos = transform.position;
@@ -36,7 +35,6 @@ public class itemDragHandler : MonoBehaviour, IDragHandler, IBeginDragHandler, I
         foreach (GameObject g in allDis)
             g.GetComponent<Collider2D>().enabled = true;
     }
-
     
     void Update()
     {

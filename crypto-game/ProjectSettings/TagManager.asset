@@ -47,9 +47,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: drawable
-    uniqueID: 2873803419
-    locked: 0
-  - name: moving
-    uniqueID: 3082936715
-    locked: 0
