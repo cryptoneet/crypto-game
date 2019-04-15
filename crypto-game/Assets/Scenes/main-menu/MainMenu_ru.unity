@@ -204,7 +204,6 @@ RectTransform:
   m_Children:
   - {fileID: 1654405394}
   - {fileID: 1883796497}
-  - {fileID: 262997247}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -533,16 +532,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262997246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 40551644}
-  m_RootOrder: 2
+  m_Father: {fileID: 1654405394}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247.28, y: 173.5}
+  m_AnchoredPosition: {x: -246.78, y: 173.5}
   m_SizeDelta: {x: 214.12, y: 87.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &262997248
@@ -2964,7 +2963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 1883796498}
   startButHit: 0
-  sceneName: level_1
+  sceneName: SlideScene_1
 --- !u!4 &1585371926
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,6 +3297,7 @@ RectTransform:
   - {fileID: 1273257473}
   - {fileID: 1812951256}
   - {fileID: 394442766}
+  - {fileID: 262997247}
   m_Father: {fileID: 40551644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
