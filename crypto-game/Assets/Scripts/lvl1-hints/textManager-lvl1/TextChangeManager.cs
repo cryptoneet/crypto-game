@@ -36,6 +36,10 @@ public class TextChangeManager : MonoBehaviour
             animForHint.Play("showHint");
             cCake++;
         }
-        
+    }
+    public void onSymbFound()
+    {
+        txtHint.text = "Странный символ.\nНебрежно написан. \nМне кажется, похожий я где-то уже видел...";
+        animForHint.Play("showHint");
     }
 }

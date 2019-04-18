@@ -10,6 +10,7 @@ TagManager:
   - draw_zone
   - Settings
   - text
+  - clue_symb
   layers:
   - Default
   - TransparentFX

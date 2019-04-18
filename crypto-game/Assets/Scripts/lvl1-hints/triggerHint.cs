@@ -9,14 +9,30 @@ public class triggerHint : MonoBehaviour
     //for timer
     public float targTime = 0.0f;
 
+    //for blick
     Animator blick_vis;
     AudioSource blick_aud;
-    bool onTrigTimer = false;
+    bool onBlickTrig = false;
+    //for symb
+    AudioSource symb_aud;
+    bool onSymbTrig = false;
     //for textChangeManager
     public TextChangeManager txtMngr;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "clue_symb")
+        {
+            symb_aud = collision.GetComponent<AudioSource>();
+            symb_aud.volume = globalVar.volValue;
+            if (!symb_aud.isPlaying)
+            {
+                symb_aud.Play();
+            }
+            targTime = 2f;
+            onSymbTrig = true;
+            
+        }
         if (collision.tag == "clue_blick")
         {
             blick_vis = collision.GetComponent<Animator>();
@@ -27,27 +43,39 @@ public class triggerHint : MonoBehaviour
                 blick_aud.Play();
             }
             targTime = 2f;
-            onTrigTimer = true;
+            onBlickTrig = true;
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
+        if(collision.tag == "clue_symb")
+        {
+            onSymbTrig = false;
+        }
         if (collision.tag == "clue_blick")
         {
             blick_vis = collision.GetComponent<Animator>();
             blick_vis.Play("blick_hide");
-            onTrigTimer = false;
+            onBlickTrig = false;
         }
     }
     void Update()
     {
-        if (onTrigTimer)
+        if (onSymbTrig)
         {
-
             targTime -= Time.deltaTime;
             if (targTime <= 0.0f)
             {
-                onTrigTimer = false;
+                onSymbTrig = false;
+                txtMngr.onSymbFound();
+            }
+        }
+        if (onBlickTrig)
+        {
+            targTime -= Time.deltaTime;
+            if (targTime <= 0.0f)
+            {
+                onBlickTrig = false;
                 blick_vis.Play("blick_hide");
                 txtMngr.onClueFoundChange();
 
