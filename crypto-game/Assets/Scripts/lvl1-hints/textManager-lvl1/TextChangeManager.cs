@@ -42,4 +42,9 @@ public class TextChangeManager : MonoBehaviour
         txtHint.text = "Странный символ.\nНебрежно написан. \nМне кажется, похожий я где-то уже видел...";
         animForHint.Play("showHint");
     }
+    public void onTrueCodeEntered()
+    {
+        txtHint.text = "\nЕсть!!! Получилось открыть! Что же внутри?";
+        animForHint.Play("showHint");
+    }
 }
