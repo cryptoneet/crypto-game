@@ -11,6 +11,7 @@ TagManager:
   - Settings
   - text
   - clue_symb
+  - active_letter
   layers:
   - Default
   - TransparentFX

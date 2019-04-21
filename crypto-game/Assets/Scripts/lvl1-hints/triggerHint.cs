@@ -16,11 +16,31 @@ public class triggerHint : MonoBehaviour
     //for symb
     AudioSource symb_aud;
     bool onSymbTrig = false;
+    public bool isSymbClueFound = false;
+    //for letter to burn
+    AudioSource letter_aud;
+    Animator letter_animator;
+    bool onLetterTrig = false;
+    public static bool onWindowOpened = false;
     //for textChangeManager
     public TextChangeManager txtMngr;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "active_letter")
+        {
+            if(isSymbClueFound)
+            {
+                if (onWindowOpened)
+                {
+                    letter_aud = collision.GetComponent<AudioSource>();
+                    letter_animator = collision.GetComponent<Animator>();
+                    targTime = 2f;
+                    onLetterTrig = true;
+                }
+                
+            }
+        }
         if(collision.tag == "clue_symb")
         {
             symb_aud = collision.GetComponent<AudioSource>();
@@ -48,6 +68,10 @@ public class triggerHint : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
+        if(collision.tag == "active_letter")
+        {
+            onLetterTrig = false;
+        }
         if(collision.tag == "clue_symb")
         {
             onSymbTrig = false;
@@ -61,13 +85,24 @@ public class triggerHint : MonoBehaviour
     }
     void Update()
     {
+        if (onLetterTrig)
+        {
+            targTime -= Time.deltaTime;
+            if(targTime <= 0.0f)
+            {
+                onLetterTrig = false;
+                
+            }
+        }
         if (onSymbTrig)
         {
             targTime -= Time.deltaTime;
             if (targTime <= 0.0f)
             {
+                isSymbClueFound = true;
                 onSymbTrig = false;
                 txtMngr.onSymbFound();
+                
             }
         }
         if (onBlickTrig)
@@ -78,7 +113,6 @@ public class triggerHint : MonoBehaviour
                 onBlickTrig = false;
                 blick_vis.Play("blick_hide");
                 txtMngr.onClueFoundChange();
-
             }
         }
     }
