@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class SlideTrigger : MonoBehaviour
 {
     public Animator obj;
@@ -9,6 +9,7 @@ public class SlideTrigger : MonoBehaviour
     public float startTime;
     public float EndTime;
     private AudioSource audioSource;
+    private int counter;
     // Start is called before the first frame update
     bool coroutine = false;
     void Start()
@@ -16,22 +17,27 @@ public class SlideTrigger : MonoBehaviour
         obj = GetComponent<Animator>();
         StartCoroutine(Example());
         audioSource = GetComponent<AudioSource>();
+        counter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (coroutine)
         {
-            // StartCoroutine(Example());
             if (Input.GetMouseButtonDown(0))
             {
-                // obj.Play("Slide1move");
-                obj.GetComponent<Animator>().SetTrigger("Clicked");
-                arrow.SetActive(false);
-                audioSource.Play();
-                StartCoroutine(Example());
-                coroutine = false;
+                if (counter < 2)
+                {
+                    obj.SetTrigger("Clicked");
+                    counter++;
+                    arrow.SetActive(false);
+                    audioSource.Play();
+                    StartCoroutine(Example());
+                    coroutine = false;
+                }
+                else SceneManager.LoadScene("level_1");
             }
         }
     }
