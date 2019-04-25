@@ -19,6 +19,7 @@ public class SlideTrigger : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         counter = 0;
         arrow.SetActive(false);
+        audioSource.volume = globalVar.volValue;
     }
 
     // Update is called once per frame
