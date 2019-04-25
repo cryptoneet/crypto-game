@@ -181,7 +181,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Slide3Remove
+  m_Name: Blur
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -194,7 +194,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5ece49d1b8ae7234b8fa014b87a2d106, type: 2}
+  m_Motion: {fileID: 7400000, guid: 033c37039c018fe46b528bf2b13eb9dc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -386,7 +386,7 @@ AnimatorStateMachine:
     m_Position: {x: -192, y: 84, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102156723598282630}
-    m_Position: {x: -360, y: -36, z: 0}
+    m_Position: {x: -360, y: -40, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

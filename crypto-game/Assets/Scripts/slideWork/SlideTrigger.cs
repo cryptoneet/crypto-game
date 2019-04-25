@@ -18,6 +18,7 @@ public class SlideTrigger : MonoBehaviour
         StartCoroutine(Example());
         audioSource = GetComponent<AudioSource>();
         counter = 0;
+        arrow.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class SlideTrigger : MonoBehaviour
                     StartCoroutine(Example());
                     coroutine = false;
                 }
-                else SceneManager.LoadScene("level_1");
+                else StartCoroutine(Scene_change());
             }
         }
     }
@@ -47,5 +48,23 @@ public class SlideTrigger : MonoBehaviour
         yield return new WaitForSeconds(5);
         arrow.SetActive(true);
         coroutine = true;
+    }
+    private IEnumerator Scene_change()
+    {
+        if (SceneManager.GetActiveScene().name == "SlideScene_1")
+        {
+            obj.SetTrigger("Clicked");
+            arrow.SetActive(false);
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene("level_1");
+
+        }
+        else if (SceneManager.GetActiveScene().name == "SlideScene_2")
+        {
+            obj.SetTrigger("Clicked");
+            arrow.SetActive(false);
+            yield return new WaitForSeconds(2);
+            SceneManager.LoadScene("level_2");
+        }
     }
 }
