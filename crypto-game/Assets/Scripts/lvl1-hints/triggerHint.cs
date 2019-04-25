@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class triggerHint : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class triggerHint : MonoBehaviour
     Animator letter_animator;
     bool onLetterTrig = false;
     public static bool onWindowOpened = false;
+    public GameObject letterBurned_sprite;
+    public GameObject codeBurned;
     //for textChangeManager
     public TextChangeManager txtMngr;
 
@@ -91,7 +94,9 @@ public class triggerHint : MonoBehaviour
             if(targTime <= 0.0f)
             {
                 onLetterTrig = false;
-                
+                letter_animator.Play("burnAnim");
+                letterBurned_sprite.SetActive(true);
+                codeBurned.SetActive(true);
             }
         }
         if (onSymbTrig)
