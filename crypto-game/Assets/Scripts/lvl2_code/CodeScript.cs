@@ -15,11 +15,18 @@ public class CodeScript : MonoBehaviour
         codeCounter++;
         click_aud.Play();
     }
+    public void toNullClick()
+    {
+        codeCounter = 0;
+    }
 
     void Update()
     {
         if (codeCounter >= 10)
+        {
             codeCounter = 0;
+        }
+            
 
         codeTxt.text = codeCounter.ToString();
         
