@@ -2929,7 +2929,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u0442\u043E\u0434\u044B \u0448\u0438\u0444\u0440\u043E\u0432\u0430\u043D\u0438\u044F"
+  m_Text: "\u0410\u0431\u0431\u0440\u0435\u0432\u0438\u0430\u0442\u0443\u0440\u044B"
 --- !u!222 &738680165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5575,29 +5575,27 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: c26f8f3e39225b444bf5a001b6cc867d, type: 3}
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum neque
-    lectus, faucibus ac sodales at, accumsan rhoncus lacus. Maecenas nec lorem mattis,
-    porttitor lorem vel, interdum sem. Duis sit amet sem porta, tincidunt orci sed,
-    aliquam augue. Mauris imperdiet diam pretium nisi gravida, ac tincidunt lorem
-    tristique. Integer cursus laoreet risus, sed sollicitudin odio pulvinar fringilla.
-    Donec auctor interdum erat, sed ultricies dui viverra id. Sed eu ultricies augue.
-    Sed ullamcorper, mi eu imperdiet scelerisque, risus erat pretium felis, nec suscipit
-    ex magna eu lectus.\r\n\r\nVestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nulla vel sollicitudin velit. Praesent feugiat
-    faucibus libero, quis interdum arcu suscipit ac. Maecenas sed aliquet velit, id
-    scelerisque diam. "
+    m_LineSpacing: 0.91
+  m_Text: "CES <...> - \u0448\u0438\u0444\u0440 \u0446\u0435\u0437\u0430\u0440\u044F
+    <\u0431\u0443\u043A\u0432\u0430 \u0434\u043B\u044F \u0441\u0434\u0432\u0438\u0433\u0430>\nROT
+    <1...n> - Rotation on Next Letter <\u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+    \u0431\u0443\u043A\u0432 \u0434\u043B\u044F \u0441\u0434\u0432\u0438\u0433\u0430>\nMOZ
+    - \u0430\u0437\u0431\u0443\u043A\u0430 \u043C\u043E\u0440\u0437\u0435\nTRANSP
+    <\u043C\u0435\u0442\u043E\u0434> - \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0437\u0438\u0446\u0438\u044F
+    <\u043C\u0435\u0442\u043E\u0434 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0437\u0438\u0446\u0438\u0438>\nPSCUARE
+    - \u041A\u0432\u0430\u0434\u0440\u0430\u0442 \u043F\u043E\u043B\u0438\u0431\u0438\u044F\nCARDGRID
+    - \u0440\u0435\u0448\u0435\u0442\u043A\u0430 \u041A\u0430\u0440\u0434\u0430\u043D\u043E"
 --- !u!222 &1692303815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5830,7 +5828,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "\u041C\u0435\u0442\u043E\u0434\u044B \u0448\u0438\u0444\u0440\u043E\u0432\u0430\u043D\u0438\u044F"
+          m_StringArgument: "\u0410\u0431\u0431\u0440\u0435\u0432\u0438\u0430\u0442\u0443\u0440\u044B"
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 690602198}
