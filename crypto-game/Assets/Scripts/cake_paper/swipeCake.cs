@@ -18,7 +18,7 @@ public class swipeCake : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         //state info
         var animatorStateInfo = animatorCake.GetCurrentAnimatorStateInfo(0);
-        //get the name of anim running
+        //get the nameTrig of anim running
         if (animatorStateInfo.IsName(animName))
             return true;
 
