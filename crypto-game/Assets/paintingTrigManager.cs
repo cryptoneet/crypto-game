@@ -10,42 +10,65 @@ public class paintingTrigManager : MonoBehaviour
     private static paintingTrig pt3;
     private static paintingTrig pt4;
 
-    private void Awake()
+    private static Animator animPicture;
+    
+    //private static AudioSource aud_picture_false;
+
+    private void Start()
     {
+        animPicture = GetComponent<Animator>();
+
         GameObject g_pt1 = GameObject.Find("pt1");
         pt1 = g_pt1.GetComponent<paintingTrig>();
 
         GameObject g_pt2 = GameObject.Find("pt2");
-        pt2 = g_pt1.GetComponent<paintingTrig>();   
+        pt2 = g_pt2.GetComponent<paintingTrig>();   
 
-        GameObject g_pt3 = transform.Find("pt3").gameObject;
-        pt3 = g_pt1.GetComponent<paintingTrig>();
+        GameObject g_pt3 = GameObject.Find("pt3");
+        pt3 = g_pt3.GetComponent<paintingTrig>();
 
-        GameObject g_pt4 = transform.Find("pt4").gameObject;
-        pt4 = g_pt1.GetComponent<paintingTrig>();
+        GameObject g_pt4 = GameObject.Find("pt4");
+        pt4 = g_pt4.GetComponent<paintingTrig>();
 
         pt1.trigStatus = true;
     }
     public static void nameChecker(string name)
     {
-        if(name == "pt1")
+        
+        switch (name)
         {
-            Debug.Log("First one");
-            pt3.trigStatus = true;
+            case "pt1":
+                pt3.trigStatus = true;
+                break;
+            case "pt3":
+                pt4.trigStatus = true;
+                break;
+            case "pt4":
+                pt2.trigStatus = true;
+                break;
+            case "pt2":
+                animPicture.Play("secret_show");
+                break;
+
         }
-        if(name == "pt3")
-        {
-            Debug.Log("sec one");
-            pt4.trigStatus = true;
-        }
-        if(name == "pt4")
-        {
-            pt2.trigStatus = true;
-        }
-        if(name == "pt2")
-        {
-            Debug.Log("yes");
-        }
+        //if(name == "pt1")
+        //{
+        //    Debug.Log("First one");
+        //    pt3.trigStatus = true;
+        //}
+        //if(name == "pt3")
+        //{
+        //    Debug.Log("sec one");
+        //    pt4.trigStatus = true;
+        //}
+        //if(name == "pt4")
+        //{
+        //    pt2.trigStatus = true;
+        //}
+        //if(name == "pt2")
+        //{
+        //    Debug.Log("yes");
+        //}
     }
 
     public static void setPtOff()
