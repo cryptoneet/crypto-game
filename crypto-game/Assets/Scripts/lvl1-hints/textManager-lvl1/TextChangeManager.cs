@@ -46,5 +46,6 @@ public class TextChangeManager : MonoBehaviour
     {
         txtHint.text = "\nЕсть!!! Получилось открыть! Что же внутри?";
         animForHint.Play("showHint");
+
     }
 }
