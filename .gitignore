@@ -35,3 +35,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 crypto-game/Assets/Plugins/GitHub/Editor.meta
+crypto-game/ProjectSettings/XRSettings.asset
