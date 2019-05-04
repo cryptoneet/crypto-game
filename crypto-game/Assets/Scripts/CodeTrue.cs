@@ -17,9 +17,16 @@ public class CodeTrue : MonoBehaviour
     public AudioSource true_aud;
     public TextChangeManager txtMngr;
 
+
+    Animator mapAnimator;
+
+    paintingTrig pt1;
     private void Start()
     {
         true_aud.volume = globalVar.volValue;
+        //initialize
+        pt1 = GameObject.Find("pt1").GetComponent<paintingTrig>();
+        mapAnimator = GameObject.Find("paper_map").GetComponent<Animator>();
     }
 
     int count = 0;
@@ -44,5 +51,8 @@ public class CodeTrue : MonoBehaviour
     {
         txtMngr.onTrueCodeEntered();
         true_aud.Play();
+        pt1.trigStatus = true;
+        mapAnimator.Play("paperMapShow");
+
     }
 }

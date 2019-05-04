@@ -30,7 +30,6 @@ public class paintingTrigManager : MonoBehaviour
         GameObject g_pt4 = GameObject.Find("pt4");
         pt4 = g_pt4.GetComponent<paintingTrig>();
 
-        pt1.trigStatus = true;
     }
     public static void nameChecker(string name)
     {
@@ -51,24 +50,6 @@ public class paintingTrigManager : MonoBehaviour
                 break;
 
         }
-        //if(name == "pt1")
-        //{
-        //    Debug.Log("First one");
-        //    pt3.trigStatus = true;
-        //}
-        //if(name == "pt3")
-        //{
-        //    Debug.Log("sec one");
-        //    pt4.trigStatus = true;
-        //}
-        //if(name == "pt4")
-        //{
-        //    pt2.trigStatus = true;
-        //}
-        //if(name == "pt2")
-        //{
-        //    Debug.Log("yes");
-        //}
     }
 
     public static void setPtOff()

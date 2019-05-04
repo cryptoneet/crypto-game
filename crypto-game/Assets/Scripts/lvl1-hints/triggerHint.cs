@@ -27,9 +27,10 @@ public class triggerHint : MonoBehaviour
     public GameObject codeBurned;
     //for textChangeManager
     public TextChangeManager txtMngr;
-
+   
     public void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if (collision.tag == "active_letter")
         {
             if(isSymbClueFound)
