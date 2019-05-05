@@ -8,6 +8,7 @@ public class infInventory : MonoBehaviour
     Text infTxt;
     Animator infPanel_animtr;
     GameObject casseteFar;
+    
 
     bool infShown = false;
     float time = 3f;
