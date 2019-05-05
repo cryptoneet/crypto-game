@@ -15,7 +15,10 @@ public class TextChangeManager : MonoBehaviour
     {
         if(cHint < 1)
         {
-            txtHint.text = "Хмм.. Скрытое послание \nДавайте используем лупу чтобы обнаружить мелочи. \nБудьте внимательны!";
+            if(globalVar.lang == "rus")
+                txtHint.text = "Хмм.. Скрытое послание \nДавайте используем лупу чтобы обнаружить мелочи. \nБудьте внимательны!";
+            else
+                txtHint.text = "Hmm.. Hidden message \nLet's try to use magnifier to discover details. \nBe careful!";
             animForHint.Play("showHint");
             cHint++;
         }
@@ -23,26 +26,38 @@ public class TextChangeManager : MonoBehaviour
     }
     public void onClueFoundChange()
     {
-        txtHint.text = "*на бумаге найдены неровности* \nВидимо на бумагу преднамеренно было нанесено какое-то вещество. Нужно придумать, как с ним взаимодействовать.";
+        if(globalVar.lang == "rus")
+            txtHint.text = "*на бумаге найдены неровности* \nВидимо на бумагу преднамеренно было нанесено какое-то вещество. Нужно придумать, как с ним взаимодействовать.";
+        else
+            txtHint.text = "*there are some bumps* \nMaybe paper was intentionally covered with some substance. I need to find how to interact with it.";
         animForHint.Play("showHint");   
     }
     public void onPaperCake()
     {
         if(cCake < 1)
         {
-            txtHint.text = "Некоторые объекты можно рассматривать более детально. \nРазверните листок свайпом чтобы исследовать его детальнее.";
+            if (globalVar.lang == "rus")
+                txtHint.text = "Некоторые объекты можно рассматривать более детально. \nРазверните листок свайпом чтобы исследовать его детальнее.";
+            else
+                txtHint.text = "Some objects could be viewed more detailed. \nTurn sticker by swiping right to explore it properly.";
             animForHint.Play("showHint");
             cCake++;
         }
     }
     public void onSymbFound()
     {
-        txtHint.text = "Странный символ.\nНебрежно написан. \nМне кажется, похожий я где-то уже видел...";
+        if (globalVar.lang == "rus")
+            txtHint.text = "Странный символ.\nНебрежно написан. \nМне кажется, похожий я где-то уже видел...";
+        else
+            txtHint.text = "Strange symbol.\nCasually written. \nSomehow, the symbol is familiar to me...";
         animForHint.Play("showHint");
     }
     public void onTrueCodeEntered()
     {
-        txtHint.text = "\nЕсть!!! Получилось открыть! Что же внутри?";
+        if (globalVar.lang == "rus")
+            txtHint.text = "\nЕсть!!! Получилось открыть! Что же внутри?";
+        else
+            txtHint.text = "\nGreat! Managed to open it! What's inside?";
         animForHint.Play("showHint");
 
     }
