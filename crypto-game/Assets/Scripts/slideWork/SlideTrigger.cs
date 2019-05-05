@@ -56,15 +56,20 @@ public class SlideTrigger : MonoBehaviour
             obj.SetTrigger("Clicked");
             arrow.SetActive(false);
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene("level_1");
-
+            if(globalVar.lang == "rus")
+                SceneManager.LoadScene("level_1");
+            else
+                SceneManager.LoadScene("level_1_en");
         }
         else if (SceneManager.GetActiveScene().name == "SlideScene_2")
         {
             obj.SetTrigger("Clicked");
             arrow.SetActive(false);
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene("level_2");
+            if (globalVar.lang == "rus")
+                SceneManager.LoadScene("level_2");
+            else
+                SceneManager.LoadScene("level_2_en");
         }
     }
 }

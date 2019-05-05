@@ -49,7 +49,10 @@ public class paperShowUpTImer : MonoBehaviour
 
     void hintChangeNShow()
     {
-        hintText.text = "Хмм, кажется ваш коллега бросил вам листок! Что бы это могло значить? \n Давайте изучим объект поближе - тапните на него.";
+        if (globalVar.lang == "rus")
+            hintText.text = "Хмм, кажется ваш коллега бросил вам листок! Что бы это могло значить? \n Давайте изучим объект поближе - тапните на него.";
+        else
+            hintText.text = "Hmm, seems your colleague threw you a paper! What it could mean? \n Let's examine it closer - tap on it.";
         hintShowAnimtr.GetComponent<Animator>().Play("showHint");
         btnHint.GetComponent<Button>().onClick.AddListener(clickingAllow);
     }
