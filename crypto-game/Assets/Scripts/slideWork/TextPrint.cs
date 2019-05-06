@@ -27,7 +27,7 @@ public class TextPrint : MonoBehaviour
         for (int i = 0; i < text.Length; i++)
         {
             mytext.text = text.Substring(0, i);
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.075f);
         }
         arrow.SetActive(true);
     }
