@@ -3,10 +3,13 @@
 public class globalVar : MonoBehaviour
 {
     public static float volValue = 0.6f;
-    public static string lang = "rus";
+    public static string lang;
 
-    public void setLang(string lg)
+    void Awake()
     {
-        lang = lg;
+        if (Application.systemLanguage == SystemLanguage.Russian)
+            lang = "rus";
+        else
+            lang = "eng";
     }
 }

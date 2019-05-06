@@ -23,12 +23,11 @@ public class bgSound : MonoBehaviour
 
     void Awake()
     {
-        audMain = GameObject.Find("bgMusic").GetComponent<AudioSource>();
-        
         if (_instance == null)
         {
             //If I am the first instance, make me the Singleton
             _instance = this;
+            audMain = _instance.gameObject.GetComponent<AudioSource>();
             DontDestroyOnLoad(this);
         }
         else
@@ -39,6 +38,7 @@ public class bgSound : MonoBehaviour
             {
                 Destroy(_instance.gameObject);
                 _instance = this;
+                audMain = _instance.gameObject.GetComponent<AudioSource>();
             }
         }
     }

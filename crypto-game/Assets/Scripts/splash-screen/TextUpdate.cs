@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TextUpdate : MonoBehaviour
 {
@@ -8,10 +9,14 @@ public class TextUpdate : MonoBehaviour
     private readonly int level = 1;
     private float timer;
     private int animNum;
+    public float transTime = 1.5f;
     public float animStart = 0.99f;
     public float timeDiff = 0.09f;
     public float animEnd = 3.24f;
     public float sceneEnd = 4f;
+    public Animator transitionAnim;
+
+
     private System.Random rnd = new System.Random();
     
     // Start is called before the first frame update
@@ -20,6 +25,15 @@ public class TextUpdate : MonoBehaviour
         titleText = gameObject.GetComponent<Text>();
         timer = 0.0f;
         animNum = 1;
+    }
+
+    public void trans()
+    {
+        transitionAnim.SetTrigger("end");
+        if (globalVar.lang == "rus")
+            SceneManager.LoadScene("MainMenu_ru");
+        else
+            SceneManager.LoadScene("MainMenu_en");
     }
 
     // Update is called once per frame
@@ -36,25 +50,25 @@ public class TextUpdate : MonoBehaviour
         if (timer < animStart)
         {
             for (int i = 0; i < text.Length; i++)
-                {
-                    if (text[i] == '\n')
-                        text[i] = text[i];
-                    else
-                        text[i] = chars[rnd.Next(chars.Length)];
-                }
-        }
-        else if (timer >= (animStart + timeDiff * (animNum - 1)) && timer < (animStart + timeDiff * animNum))
-        {
-           for (int i = animNum; i < text.Length; i++)
-           {
+            {
                 if (text[i] == '\n')
                     text[i] = text[i];
                 else
                     text[i] = chars[rnd.Next(chars.Length)];
-           }
+            }
         }
-        else if(timer >= sceneEnd)
-            SceneManager.LoadScene(level, LoadSceneMode.Single);
+        else if (timer >= (animStart + timeDiff * (animNum - 1)) && timer < (animStart + timeDiff * animNum))
+        {
+            for (int i = animNum; i < text.Length; i++)
+            {
+                if (text[i] == '\n')
+                    text[i] = text[i];
+                else
+                    text[i] = chars[rnd.Next(chars.Length)];
+            }
+        }
+        else if (timer >= sceneEnd)
+            trans();
         titleText.text = new string(text);
     }
 }
