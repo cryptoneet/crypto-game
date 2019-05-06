@@ -61,4 +61,18 @@ public class TextChangeManager : MonoBehaviour
         animForHint.Play("showHint");
 
     }
+    int counterItemFirst = 0;
+    public void onItemFirstAdding()
+    {
+        if (counterItemFirst < 1)
+        {
+            if (globalVar.lang == "rus")
+                txtHint.text = "Чтобы поместить предмет в инвентарь - перетащите его на записную книгу \nОн поместится в свободный слот";
+            else
+                txtHint.text = "To put item to inventory you need to move it to the note book.\n It will be placed in empty slot";
+            animForHint.Play("showHint");
+            counterItemFirst++;
+        }
+        
+    }
 }

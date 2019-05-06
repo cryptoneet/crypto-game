@@ -3,6 +3,7 @@
 public class bgSound : MonoBehaviour
 {
     private static bgSound _instance;
+    private static AudioSource audMain;
 
     public static bgSound instance
     {
@@ -22,6 +23,8 @@ public class bgSound : MonoBehaviour
 
     void Awake()
     {
+        audMain = GameObject.Find("bgMusic").GetComponent<AudioSource>();
+        
         if (_instance == null)
         {
             //If I am the first instance, make me the Singleton
@@ -39,7 +42,10 @@ public class bgSound : MonoBehaviour
             }
         }
     }
-
+    private void Update()
+    {
+        audMain.volume = globalVar.volValue;
+    }
     public void Play()
     {
         //Play some audio!

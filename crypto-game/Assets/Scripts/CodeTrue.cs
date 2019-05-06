@@ -17,7 +17,6 @@ public class CodeTrue : MonoBehaviour
     public AudioSource true_aud;
     public TextChangeManager txtMngr;
 
-
     Animator mapAnimator;
 
     paintingTrig pt1;
@@ -53,6 +52,6 @@ public class CodeTrue : MonoBehaviour
         true_aud.Play();
         pt1.trigStatus = true;
         mapAnimator.Play("paperMapShow");
-
+        paintingTrigManager.isChestOpened = true;
     }
 }
