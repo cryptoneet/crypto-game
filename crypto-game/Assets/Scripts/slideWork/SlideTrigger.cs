@@ -25,7 +25,7 @@ public class SlideTrigger : MonoBehaviour
     void Update()
     {
 
-        if (coroutine)
+        if (arrow.activeSelf)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -35,8 +35,8 @@ public class SlideTrigger : MonoBehaviour
                     counter++;
                     arrow.SetActive(false);
                     audioSource.Play();
-                    StartCoroutine(Example());
-                    coroutine = false;
+                   // StartCoroutine(Example());
+                    //coroutine = false;
                 }
                 else StartCoroutine(Scene_change());
             }
@@ -45,8 +45,8 @@ public class SlideTrigger : MonoBehaviour
     private IEnumerator Example()
     {
         coroutine = false;
-        yield return new WaitForSeconds(5);
-        arrow.SetActive(true);
+        yield return new WaitForSeconds(39);
+       // arrow.SetActive(true);
         coroutine = true;
     }
     private IEnumerator Scene_change()
