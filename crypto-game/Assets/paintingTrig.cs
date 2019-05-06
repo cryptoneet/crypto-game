@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class paintingTrig : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class paintingTrig : MonoBehaviour
     string nameTrig;
     private AudioSource aud_picture;
     public AudioClip[] audioClips = new AudioClip[2];
+   
 
     void Awake()
     {
@@ -32,6 +31,7 @@ public class paintingTrig : MonoBehaviour
             aud_picture.clip = audioClips[0];
             aud_picture.Play();
             paintingTrigManager.setPtOff();
+
         }
     }
 }

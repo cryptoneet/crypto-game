@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class paintingTrigManager : MonoBehaviour
 {
@@ -11,8 +9,10 @@ public class paintingTrigManager : MonoBehaviour
     private static paintingTrig pt4;
 
     private static Animator animPicture;
-    
-    //private static AudioSource aud_picture_false;
+    public TextChangeManager txtManager;
+
+    public static bool isChestOpened = false;
+
 
     private void Start()
     {
@@ -29,6 +29,8 @@ public class paintingTrigManager : MonoBehaviour
 
         GameObject g_pt4 = GameObject.Find("pt4");
         pt4 = g_pt4.GetComponent<paintingTrig>();
+
+        txtManager = GameObject.Find("hintPrefab").GetComponent<TextChangeManager>();
 
     }
     public static void nameChecker(string name)
@@ -54,10 +56,29 @@ public class paintingTrigManager : MonoBehaviour
 
     public static void setPtOff()
     {
-        pt1.trigStatus = true;
-        pt2.trigStatus = false;
-        pt3.trigStatus = false;
-        pt4.trigStatus = false;
+        switch (isChestOpened)
+        {
+            case true:
+                {
+                    pt1.trigStatus = true;
+                    pt2.trigStatus = false;
+                    pt3.trigStatus = false;
+                    pt4.trigStatus = false;
+                }
+                break;
+            case false:
+                {
+                    pt1.trigStatus = false;
+                    pt2.trigStatus = false;
+                    pt3.trigStatus = false;
+                    pt4.trigStatus = false;
+                }
+                break;
+            default:
+                break;
+        }
+
+       
     }
 
 }
