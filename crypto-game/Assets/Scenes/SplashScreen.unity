@@ -752,7 +752,8 @@ MonoBehaviour:
   animStart: 0.99
   timeDiff: 0.09
   animEnd: 3.24
-  sceneEnd: 3.5
+  sceneEnd: 2.94
+  transEnd: 1.5
   transitionAnim: {fileID: 143142319}
 --- !u!1 &1365625172
 GameObject:

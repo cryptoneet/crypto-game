@@ -14,6 +14,7 @@ public class TextUpdate : MonoBehaviour
     public float timeDiff = 0.09f;
     public float animEnd = 3.24f;
     public float sceneEnd = 4f;
+    public float transEnd = 1f;
     public Animator transitionAnim;
 
 
@@ -27,9 +28,16 @@ public class TextUpdate : MonoBehaviour
         animNum = 1;
     }
 
+    
+
     public void trans()
     {
         transitionAnim.SetTrigger("end");
+        StartCoroutine(TimeDel(transEnd));
+    }
+    IEnumerator TimeDel(float t)
+    {
+        yield return new WaitForSeconds(t);
         if (globalVar.lang == "rus")
             SceneManager.LoadScene("MainMenu_ru");
         else
