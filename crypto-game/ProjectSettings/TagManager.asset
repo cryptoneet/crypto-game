@@ -13,6 +13,8 @@ TagManager:
   - clue_symb
   - active_letter
   - inventoryZone
+  - arrow_left
+  - arrow_right
   layers:
   - Default
   - TransparentFX

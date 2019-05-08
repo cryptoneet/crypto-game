@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class swipeCake : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
     public bool isTurned = false;
+    private static bool State;
     public GameObject paperCake;
     Animator animatorCake;
     void Start()
@@ -23,6 +24,11 @@ public class swipeCake : MonoBehaviour, IBeginDragHandler, IDragHandler
         return false;
     }
 
+    public static bool returnState()
+    {
+        return State;
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
             if ((Mathf.Abs(eventData.delta.x)) > (Mathf.Abs(eventData.delta.y)))
@@ -35,26 +41,21 @@ public class swipeCake : MonoBehaviour, IBeginDragHandler, IDragHandler
                         if (!IsAnimationPlaying("cakeTurn"))
                         {
                             isTurned = true;
+                            State = isTurned;
                         }
-
-                }
+                    }
                 }
                 else
                 {
                     if(isTurned == true)
+                    {
+                        animatorCake.Play("cakeUnturn");
+                        if (!IsAnimationPlaying("cakeUnturn"))
                         {
-                            animatorCake.Play("cakeUnturn");
-                            if (!IsAnimationPlaying("cakeUnturn"))
-                            {
-                                isTurned = false;
-                            }
+                            isTurned = false;
+                            State = isTurned;
                         }
-                    
-                    //if (isTurned == true)
-                    //{
-                    //    isTurned = false;
-                    //}
-
+                    }
                 }
             }       
     }

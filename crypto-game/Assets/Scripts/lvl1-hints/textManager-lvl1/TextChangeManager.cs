@@ -44,6 +44,15 @@ public class TextChangeManager : MonoBehaviour
             cCake++;
         }
     }
+    public void onStickerClueFound()
+    {
+        //Change text
+        if (globalVar.lang == "rus")
+            txtHint.text = "Некоторые объекты можно рассматривать более детально. \nРазверните листок свайпом чтобы исследовать его детальнее.";
+        else
+            txtHint.text = "Some objects could be viewed more detailed. \nTurn sticker by swiping right to explore it properly.";
+        animForHint.Play("showHint");
+    }
     public void onSymbFound()
     {
         if (globalVar.lang == "rus")
@@ -59,7 +68,6 @@ public class TextChangeManager : MonoBehaviour
         else
             txtHint.text = "\nGreat! Managed to open it! What's inside?";
         animForHint.Play("showHint");
-
     }
     int counterItemFirst = 0;
     public void onItemFirstAdding()
@@ -73,6 +81,5 @@ public class TextChangeManager : MonoBehaviour
             animForHint.Play("showHint");
             counterItemFirst++;
         }
-        
     }
 }

@@ -6,7 +6,6 @@ using System.Collections;
 public class TextUpdate : MonoBehaviour
 {
     private Text titleText;
-    private readonly int level = 1;
     private float timer;
     private int animNum;
     public float transTime = 1.5f;
@@ -28,13 +27,12 @@ public class TextUpdate : MonoBehaviour
         animNum = 1;
     }
 
-    
-
     public void trans()
     {
         transitionAnim.SetTrigger("end");
         StartCoroutine(TimeDel(transEnd));
     }
+
     IEnumerator TimeDel(float t)
     {
         yield return new WaitForSeconds(t);
