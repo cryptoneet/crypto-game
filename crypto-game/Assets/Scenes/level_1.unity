@@ -3152,7 +3152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 153.57}
   m_AnchorMin: {x: 0.23660931, y: 0.040679462}
   m_AnchorMax: {x: 0.33625, y: 0.2766795}
-  m_AnchoredPosition: {x: 49.00087, y: -85.99997}
+  m_AnchoredPosition: {x: 49.00096, y: -85.99997}
   m_SizeDelta: {x: -46.93091, y: -12.5}
   m_Pivot: {x: 0.23, y: 0.9}
 --- !u!50 &625344149
@@ -6794,6 +6794,7 @@ GameObject:
   - component: {fileID: 1349202075}
   - component: {fileID: 1349202078}
   - component: {fileID: 1349202079}
+  - component: {fileID: 1349202080}
   m_Layer: 5
   m_Name: hintPrefab
   m_TagString: Untagged
@@ -6943,6 +6944,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1349202080}
+        m_MethodName: endLVL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1349202079
@@ -6959,6 +6971,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   txtHint: {fileID: 1089470247}
   animForHint: {fileID: 1349202075}
+--- !u!114 &1349202080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349202073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8363a1bfa90f049b9565f4549095c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transaction: {fileID: 1672938267}
 --- !u!1 &1356394278
 GameObject:
   m_ObjectHideFlags: 0
@@ -9041,7 +9066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 782835229}
   startButHit: 0
-  sceneName: MainMenu_ru
+  sceneName: SlideScene_2
 --- !u!4 &1672938268
 Transform:
   m_ObjectHideFlags: 0

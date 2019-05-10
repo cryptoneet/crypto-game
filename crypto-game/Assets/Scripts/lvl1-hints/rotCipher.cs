@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class rotCipher : MonoBehaviour
 {
     private Text hintText;
-    private bool changed = false, minigame = false;
+    private bool changed = false, minigame = false, won = false;
 
     public GameObject arrowL, arrowR;
     public TextChangeManager textManager;
@@ -23,18 +23,22 @@ public class rotCipher : MonoBehaviour
 
     public void startMinigame()
     {
-        if(changed == false && minigame == false)
+        if (changed == false && minigame == false && won == false)
         {
+            Debug.Log("Minigame started");
             minigame = true;
             arrowL.SetActive(true);
             arrowR.SetActive(true);
             shift = 0;
         }
-        if(shift == finShift)
+        else if (shift == finShift)
         {
             arrowL.SetActive(false);
             arrowR.SetActive(false);
             textManager.onStickerClueFound();
+            minigame = false;
+            won = true;
+            Debug.Log("Won");
         }
         else
         {

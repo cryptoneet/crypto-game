@@ -11,6 +11,8 @@ public class TextChangeManager : MonoBehaviour
     //counter for paper cake click
     int cCake = 0;
 
+    public static bool showed = false;
+
     public void onPaperClickChange()
     {
         if(cHint < 1)
@@ -52,6 +54,7 @@ public class TextChangeManager : MonoBehaviour
         else
             txtHint.text = "Some objects could be viewed more detailed. \nTurn sticker by swiping right to explore it properly.";
         animForHint.Play("showHint");
+        showed = true;
     }
     public void onSymbFound()
     {
