@@ -4490,7 +4490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 897323049}
   startButHit: 0
-  sceneName: SlideScene_1
+  sceneName: SlideScene_1_en
 --- !u!4 &2064579840
 Transform:
   m_ObjectHideFlags: 0

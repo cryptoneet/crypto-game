@@ -50,9 +50,9 @@ public class TextChangeManager : MonoBehaviour
     {
         //Change text
         if (globalVar.lang == "rus")
-            txtHint.text = "Некоторые объекты можно рассматривать более детально. \nРазверните листок свайпом чтобы исследовать его детальнее.";
+            txtHint.text = "Получилось разгадать шифр! \nНу что ж, отправимся по следу и посмотрим, куда он нас приведет.";
         else
-            txtHint.text = "Some objects could be viewed more detailed. \nTurn sticker by swiping right to explore it properly.";
+            txtHint.text = "Got it! I cracked the code!. \n.Let's go getting the trail of it!";
         animForHint.Play("showHint");
         showed = true;
     }

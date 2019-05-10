@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/main-menu/MainMenu_en.unity
     guid: e915cf60526f3f04284a49e8ddb65742
   - enabled: 1
+    path: Assets/Scenes/SlideScenes/SlideScene_1_en.unity
+    guid: 32a34aad17b886c488779b2f3e3bc7bb
+  - enabled: 1
     path: Assets/Scenes/SlideScenes/SlideScene_1.unity
     guid: d99e379d90df76f45bc118b113b5efae
   - enabled: 1
@@ -26,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SlideScenes/SlideScene_2.unity
     guid: 7692a16b6bff1db489efcd4fe9e690d1
+  - enabled: 1
+    path: Assets/Scenes/SlideScenes/SlideScene_2_en.unity
+    guid: 4702e7292fcf6c04da3b613ed4a89cc8
   - enabled: 1
     path: Assets/Scenes/level_2.unity
     guid: 4f4b10ab1df066a4d94397d006e42768

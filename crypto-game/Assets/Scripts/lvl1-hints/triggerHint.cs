@@ -34,8 +34,6 @@ public class triggerHint : MonoBehaviour
             {
                 if (onWindowOpened)
                 {
-                    letter_aud = collision.GetComponent<AudioSource>();
-                    letter_aud.volume = globalVar.volValue;
                     letter_animator = collision.GetComponent<Animator>();
                     targTime = 2f;
                     onLetterTrig = true;
